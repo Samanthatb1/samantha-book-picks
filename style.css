@@ -1,0 +1,14 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Jua', sans-serif;
+  }
+
+  body{
+      background: linear-gradient(to right, hsl(310, 100%, 70%), hsl(337, 75%, 58%));
+  }
+
+  .clock{
+      width: 300px ;
+      height: 300px ;
+      background-color: rgba(255, 255, 255, .8);
+  }
