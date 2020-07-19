@@ -18,5 +18,13 @@ function setRotation(element, rotationRatio) {
   element.style.setProperty('--rotation', rotationRatio * 360)
 }
 
+
+function changeColor(){
+  const bookOne = document.getElementById
+}
+
+
+
+
 setClock()
 

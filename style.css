@@ -110,7 +110,7 @@
     display: grid ;
     margin: 90px auto ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .7fr 2fr .7fr .7fr 2fr .7fr;
+    grid-template-rows: .7fr 2fr .7fr .7fr 2fr .7fr .7fr 2fr .7fr .7fr 2fr .7fr;
     grid-gap: 40px ;
     grid-template-areas:
       "book-1 empty-1"
@@ -120,9 +120,14 @@
       "book-3 book-4"
       "empty-4 book-4"
       "book-5 empty-5"
+      "book-5 book-6"
+      "empty-6 book-6"
+      "book-7 empty-7"
+      "book-7 book-8"
+      "empty-8 book-8"
     ;
     width: 80vw ;
-    height: 200vh ;
+    height: 400vh ;
   }
 
   .grid-item-b{
@@ -130,6 +135,7 @@
     display: flex ;
     flex-direction: row ;
     justify-content: space-between;
+    align-items: center;
     position: relative ;
   }
 
@@ -163,12 +169,29 @@
   .book-5{
     grid-area: book-5;
   }
+  .book-6{
+    grid-area: book-6;
+  }
+  .empty-6{
+    grid-area: empty-6;
+  }
+  .book-7{
+    grid-area: book-7;
+  }
+  .empty-7{
+    grid-area: empty-7;
+  }
+  .book-8{
+    grid-area: book-8;
+  }
+  .empty-8{
+    grid-area: empty-8;
+  }
 
   /* WITHIN THE GRID */
 
   .rate{
     position: absolute ;
-    right: 0 ;
     top: 0 ;
     margin: 0px ;
     background-color: rgb(255, 73, 73);
@@ -179,13 +202,33 @@
     font-weight: 800;
   }
 
-  .top-section{
+  .right{
+    right: 0 ;
+  }
+
+  .left{
+    left: 0 ;
+  }
+
+  .book-section{
     height: 100%;
     width: 50% ;
     display: flex ;
     justify-content: center;
     align-items: center;
     margin-left: 20px ;
+    transition: width 1.1s ;
+  }
+
+  .book-section:hover{
+    width: 60% ;
+    transition: width 1.1s ;
+  }
+
+
+  .image-adjust{
+    margin-right: 20px ;
+    margin-left: 0px ;
   }
 
   .image{
@@ -193,12 +236,13 @@
     height: auto;
   }
 
-  .bottom-section{
+  .words-section{
     position: relative ;
     display: flex ;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 80% ;
   }
 
   .book-title{
@@ -206,6 +250,9 @@
     font-family: 'EB Garamond', serif;
     font-size: 40px ;
     font-weight: 600 ;
+    max-width: 340px ;
+    margin: 0 20px ;
+    color: black ;
   }
 
 
