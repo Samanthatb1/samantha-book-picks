@@ -1,13 +1,15 @@
 *, *::after, *::before {
     box-sizing: border-box;
-  }
-
-  body{
-      /*background: linear-gradient(to right, hsl(310, 100%, 70%), hsl(337, 75%, 58%)); */
-      padding: 0px ;
-      margin: 0px ;
-      min-width: 310px ;
-  }
+  } 
+  html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    min-width: 310px ;
+}
 
   .navbar{
     width: 100% ;
@@ -49,7 +51,7 @@
     margin: 0 auto ;
     background: linear-gradient(to right, hsl(29, 100%, 91%), hsl(0, 100%, 85%));
     font-size: 24px ;
-    padding: 25px ;
+    padding: 25px ; 
     display: flex;
     flex-direction: column ;
   }
@@ -110,7 +112,7 @@
     display: grid ;
     margin: 90px auto ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .7fr 2fr .7fr .7fr 2fr .7fr .7fr 2fr .7fr .7fr 2fr .7fr;
+    grid-template-rows: .7fr 3fr .7fr .7fr 3fr .7fr .7fr 3fr .7fr .7fr 3fr .7fr;
     grid-gap: 40px ;
     grid-template-areas:
       "book-1 empty-1"
@@ -126,8 +128,8 @@
       "book-7 book-8"
       "empty-8 book-8"
     ;
-    width: 80vw ;
-    height: 400vh ;
+    width: 90vw ;
+    height: 4000px ;
   }
 
   .grid-item-b{
@@ -137,6 +139,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative ;
+    box-shadow: 5px 10px 8px #360909;
   }
 
   .book-1{
@@ -212,7 +215,7 @@
 
   .book-section{
     height: 100%;
-    width: 50% ;
+    width: 45% ;
     display: flex ;
     justify-content: center;
     align-items: center;
@@ -237,12 +240,11 @@
   }
 
   .words-section{
-    position: relative ;
     display: flex ;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80% ;
+    height: 100% ;
   }
 
   .book-title{
@@ -252,11 +254,30 @@
     font-weight: 600 ;
     max-width: 340px ;
     margin: 0 20px ;
-    color: black ;
+    margin-top: 90px ;
+    color: rgb(241, 241, 241) ;
   }
 
+  li{
+    max-width: 310px ;
+    min-width: 302px ;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 19px ;
+    font-weight: 600 ;
+  }
 
-
+  ul.dash {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 5px ;
+    padding-left: 1em;
+}
+  ul.dash > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+}
 
 
 
@@ -345,6 +366,100 @@
   }
 
 
+  @media(max-width: 1227px){
+    .grid-container{
+      display: grid ;
+      grid-template-columns: .8fr;
+      grid-template-rows: 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr;
+      grid-gap: 15px ;
+      margin: 20px auto ;
+      justify-content: center;
+      grid-template-areas:
+
+        "book-1"
+        "empty-1"
+        "book-2"
+        "empty-2"
+        "book-3"
+        "empty-3"
+        "book-4"
+        "empty-4"
+        "book-5"
+        "empty-5"
+        "book-6"
+        "empty-6"
+        "book-7"
+        "empty-7"
+        "book-8"
+        "empty-8"
+      ;
+      width: 90vw ;
+      height: fit-content ;
+    }
+
+    .grid-item-b{
+      background-color: rgb(221, 154, 127); 
+      display: flex ;
+      flex-direction: column ;
+      justify-content: center;
+      align-items: center;
+      position: relative ;
+    }
+
+    .book-section{
+      height: 500px ;
+      width: auto ;
+      display: flex ;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0 ;
+      transition: width 1.1s ;
+    }
+    .words-section{
+      display: flex ;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center; 
+      height: 100% ;
+    }
+
+    .image{
+      height: 100% ;
+      width: auto ;
+    }
+
+    .image-adjust{
+      margin-right: 0px ;
+      margin-bottom: 10px ;
+    }
+
+    .book-title{
+      margin-top: 0px ;
+    }
+    .rate{
+      position: relative;
+      margin-bottom: 20px ;
+    }
+  
+    li{
+      min-width: 40px ;
+    }
+
+  }
+
+  @media(max-width: 1024px){
+    .parallax{
+      background: url(bookshelf.jpg) no-repeat center;
+      background-size: cover;
+      background-attachment: scroll; 
+      height: 500px ;
+    }
+
+    #parallax-two{
+      display: none ;
+    }
+  }
+
 
 
 
@@ -367,11 +482,70 @@
     .clock{
       margin-bottom: 10px ;
     }
+
+    .book-section{
+      height: 400px ;
+    }
+
+    li{
+      min-width: 380px ;
+      font-size:25px ;
+    }
+    .book-title{
+      font-size: 60px ;
+      max-width: 400px ;
+    }
   }
   
   @media (max-width: 529px){
     h1{
       text-align: center ;
       font-size: 100px ;
+    }
+    .grid-container{
+      display: grid ;
+      grid-template-columns: 310px ;
+      grid-template-rows: 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr 3fr .2fr;
+      grid-gap: 15px ;
+      margin: 0px auto ;
+      justify-content: center;
+      grid-template-areas:
+
+        "book-1"
+        "empty-1"
+        "book-2"
+        "empty-2"
+        "book-3"
+        "empty-3"
+        "book-4"
+        "empty-4"
+        "book-5"
+        "empty-5"
+        "book-6"
+        "empty-6"
+        "book-7"
+        "empty-7"
+        "book-8"
+        "empty-8"
+      ;
+      width: 80vw ;
+      height: fit-content ;
+    }
+
+    li{
+      min-width: 250px ;
+      font-size:20px ;
+    }
+
+    .book-title{
+      font-size: 40px ;
+    }
+
+    .book-section{
+      height: 300px ;
+    }
+
+    .rate{
+      font-size: 30px ;
     }
   }
