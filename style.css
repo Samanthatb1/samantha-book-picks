@@ -542,7 +542,12 @@
     }
 
     .book-section{
-      height: 400px ;
+      height: 350px ;
+    }
+
+    .image{
+      height: auto ;
+      width: 100% ;
     }
 
     .rate{
