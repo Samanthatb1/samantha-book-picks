@@ -543,11 +543,12 @@
 
     .book-section{
       height: 350px ;
+      width: 200px;
     }
 
     .image{
-      height: 110% ;
-      width: auto ;
+      height: 300px ;
+      width: 180px ;
     }
 
     .rate{
