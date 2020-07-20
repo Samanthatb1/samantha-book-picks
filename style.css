@@ -279,10 +279,98 @@
     margin-left: -1em;
 }
 
+ /* QUOTE SECTION */
+
+ .quotes{
+   background-color: rgba(236, 137, 70, 0.185);
+   margin-top: 50px ;
+   padding-bottom: 30px ;
+   display: flex ;
+   flex-direction: column;
+   align-items: center;
+   height: fit-content ;
+   transition: height 5s ;
+ }
+
+ .quotes h5{
+   font-size: 50px ;
+   margin: 15px 10px ;
+   font-family: 'Roboto Slab', serif;
+ }
 
 
+.fade-in{
+  display: inline !important ;
+
+  animation-name: expand !important;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes expand {
+  0%   {opacity: 0 ;}
+  100% {opacity: 1 ;}
+}
+
+.fade-out{
+  display: inline !important ;
+
+  animation-name: out !important;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes out {
+  0%   {opacity: 1 ;}
+  100% {opacity: 0 ;}
+}
 
 
+ .button-section{
+   display: flex ;
+   margin-top: 18px ;
+ }
+
+ .btn{
+   width: 180px ;
+   padding: 12px ;
+   margin: 0px 20px ;
+   background-color: white;
+   border-radius: 4px;
+   text-align: center;
+   box-shadow: 5px 5px 2px rgb(68, 0, 0);
+   display: flex ;
+   justify-content: space-evenly;
+   align-items: center;
+ }
+
+ .btn:hover{
+  background-color: rgb(248, 238, 238);
+ }
+
+ .quote-block{
+   width: 440px ;
+   margin-top: 30px ;
+   text-align: center;
+ }
+
+ #phil{
+   display: none; 
+ }
+
+ #fav{
+   display: none ;
+ }
+
+ .author{
+   padding: 0 10px ;
+   border-bottom: 1px solid rgb(46, 45, 45);
+ }
+ .author p{
+   margin-bottom: 5px ;
+ }
 
 
   /* CLOCK */
@@ -365,6 +453,17 @@
     background-color: black;
   }
 
+  footer{
+    background-color: rgb(255, 249, 249);
+    height: 80px ;
+    position: relative ;
+    border-top: .3px solid rgb(85, 85, 85); 
+  }
+
+
+
+
+  /* MEDIA QUERIES */
 
   @media(max-width: 1227px){
     .grid-container{
@@ -459,11 +558,6 @@
       display: none ;
     }
   }
-
-
-
-
-
 
   @media (max-width: 990px){
     h1{
