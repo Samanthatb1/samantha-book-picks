@@ -60,7 +60,7 @@
     margin: 0 auto ;
     max-width: 100% ;
     text-align: center ;
-    color: rgb(255, 247, 247) ;
+    color: rgb(255, 251, 251) ;
     font-family: 'Inconsolata', monospace;
   }
 
@@ -110,7 +110,7 @@
 
   .grid-container{
     display: grid ;
-    margin: 90px auto ;
+    margin: 50px auto ;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .7fr 3fr .7fr .7fr 3fr .7fr .7fr 3fr .7fr .7fr 3fr .7fr;
     grid-gap: 40px ;
@@ -282,7 +282,7 @@
  /* QUOTE SECTION */
 
  .quotes{
-   background-color: rgba(236, 137, 70, 0.185);
+   background-color: rgba(255, 245, 238, 0.507);
    margin-top: 50px ;
    padding-bottom: 30px ;
    display: flex ;
@@ -292,10 +292,18 @@
    transition: height 5s ;
  }
 
- .quotes h5{
+ h5{
    font-size: 50px ;
    margin: 15px 10px ;
    font-family: 'Roboto Slab', serif;
+   text-align: center;
+ }
+
+ h6{
+  font-size: 50px ;
+  margin: 30px 10px 15px 10px;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
  }
 
 
@@ -344,6 +352,7 @@
    display: flex ;
    justify-content: space-evenly;
    align-items: center;
+   cursor: pointer;
  }
 
  .btn:hover{
@@ -358,10 +367,12 @@
 
  #phil{
    display: none; 
+   color: rgb(87, 22, 22) ;
  }
 
  #fav{
    display: none ;
+   color: rgb(112, 60, 36) ;
  }
 
  .author{
@@ -370,6 +381,10 @@
  }
  .author p{
    margin-bottom: 5px ;
+ }
+
+ .the-quote{
+   margin-bottom: 50px ;
  }
 
 
@@ -456,8 +471,16 @@
   footer{
     background-color: rgb(255, 249, 249);
     height: 80px ;
-    position: relative ;
     border-top: .3px solid rgb(85, 85, 85); 
+    display: flex ;
+    flex-direction: row ;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .icon-tabler-brand-github, .icon-tabler-mail{
+    margin-right: 30px ;
+    cursor: pointer;
   }
 
 
@@ -556,6 +579,10 @@
 
     #parallax-two{
       display: none ;
+    }
+     
+    h6{
+      margin: 30px 10px 0px 10px;
     }
   }
 
@@ -659,5 +686,17 @@
       justify-content: flex-start;
       align-items: center; 
       height: 100% ;
+    }
+
+    .button-section{
+      flex-direction: column;
+    }
+
+    .btn{
+      margin: 15px ;
+    }
+
+    .quote-block{
+      width: 200px ;
     }
   }
