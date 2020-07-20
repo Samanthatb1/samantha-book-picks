@@ -509,6 +509,7 @@
       grid-gap: 15px ;
       margin: 0px auto ;
       justify-content: center;
+      align-items: center;
       grid-template-areas:
 
         "book-1"
@@ -556,5 +557,13 @@
     }
     .navbar{
       position: relative;
+    }
+
+    .words-section{
+      display: flex ;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center; 
+      height: 100% ;
     }
   }
